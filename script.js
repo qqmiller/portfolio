@@ -1,6 +1,26 @@
-/* ENTRANCE */
+/* ENTRANCE LOADER: show only on the first visit of the tab */
+const loader = document.getElementById("loader");
 const main = document.getElementById("main");
-if (main) main.classList.add("show");
+
+if (loader && main) {
+    const hasSeenLoader = sessionStorage.getItem("portfolio-loader-seen");
+
+    if (hasSeenLoader) {
+        loader.style.display = "none";
+        main.classList.add("show");
+    } else {
+        sessionStorage.setItem("portfolio-loader-seen", "true");
+        setTimeout(() => {
+            loader.classList.add("hide");
+            main.classList.add("show");
+        }, 1600);
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 2500);
+    }
+} else if (main) {
+    main.classList.add("show");
+}
 
 /* CURSOR LIGHT */
 const cursorLight = document.querySelector(".cursor-light");
