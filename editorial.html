@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOIR — ISSUE 001 · Ksenia</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .noir-project{background:#090707;color:#e8dfda}.noir-hero{max-width:1200px;margin:auto}.noir-hero h1{letter-spacing:-.04em}.noir-hero h1 i{color:#b93b31;font-style:normal}.noir-cover-stage{min-height:90vh;padding:7vh 7vw 10vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 35%,rgba(137,42,32,.22),transparent 45%)}.noir-cover-frame{position:relative;width:min(520px,82vw);box-shadow:0 30px 90px rgba(0,0,0,.7),0 0 45px rgba(183,48,38,.12);transform:rotate(-1deg);transition:transform .6s cubic-bezier(.2,.8,.2,1),box-shadow .6s}.noir-cover-frame:hover{transform:rotate(0) translateY(-12px) scale(1.015);box-shadow:0 45px 110px rgba(0,0,0,.8),0 0 65px rgba(183,48,38,.2)}.noir-cover-frame img{display:block;width:100%;height:auto}.noir-cover-frame:after{content:"NOIR / ISSUE 001";position:absolute;bottom:-34px;left:0;font:10px/1 monospace;letter-spacing:.22em;color:#7c716d}.noir-project .case-overview,.noir-project .case-info,.noir-project .case-concept,.noir-project .case-system,.noir-project .case-interaction,.noir-project .case-final{max-width:1200px;margin-left:auto;margin-right:auto}.noir-project .case-label{color:#b93b31}.noir-project .case-copy h2 i,.noir-project .case-concept h2 i,.noir-project .case-interaction h2 i,.noir-project .case-final h2 i{color:#b93b31}.noir-project .interaction-demo{border-color:#55201c}.noir-project .interaction-demo strong{color:#b93b31}
+        @media(max-width:700px){.noir-cover-stage{min-height:auto;padding:4rem 1.2rem 7rem}.noir-cover-frame{width:min(440px,88vw)}.noir-cover-frame:after{font-size:8px}.noir-hero{padding-left:1.2rem;padding-right:1.2rem}}
+    </style>
 </head>
 <body class="project-page noir-project">
     <div class="noise"></div>
-
     <header class="project-header">
         <a href="index.html" class="project-back">← ALL WORKS</a>
         <div class="project-header-number">01 / 05</div>
     </header>
-
     <main>
         <section class="case-hero noir-hero">
             <div class="case-meta">PRINT DESIGN · PERSONAL PROJECT · 2026</div>
@@ -23,13 +25,11 @@
                 <span>ART DIRECTION · EDITORIAL · TYPOGRAPHY</span>
             </div>
         </section>
-
         <section class="noir-cover-stage">
             <div class="noir-cover-frame">
-                <img src="assets/noir-cover.jpg" alt="NOIR Issue 001 magazine cover">
+                <img src="assets/noir-cover.svg" alt="NOIR Issue 001 magazine cover">
             </div>
         </section>
-
         <section class="case-overview">
             <div class="case-label">01 — OVERVIEW</div>
             <div class="case-copy">
@@ -38,22 +38,16 @@
                 <p>The cover uses oversized vertical typography against a deliberately imperfect photograph. The closer you look, the more details appear.</p>
             </div>
         </section>
-
         <section class="case-info">
             <div><span>ROLE</span><strong>Art Direction<br>Editorial Design<br>Typography</strong></div>
             <div><span>YEAR</span><strong>2026</strong></div>
             <div><span>TOOLS</span><strong>Figma<br>Photoshop<br>InDesign</strong></div>
             <div><span>TYPE</span><strong>Magazine<br>Cover</strong></div>
         </section>
-
         <section class="case-concept">
             <div class="case-label">02 — CONCEPT</div>
-            <div>
-                <h2>Look closer.<br><i>The city is alive.</i></h2>
-                <p>The visual direction treats the cover like a film still: warm street light, deep shadows, grain and restrained typography create a late-night atmosphere without over-explaining it.</p>
-            </div>
+            <div><h2>Look closer.<br><i>The city is alive.</i></h2><p>The visual direction treats the cover like a film still: warm street light, deep shadows, grain and restrained typography create a late-night atmosphere without over-explaining it.</p></div>
         </section>
-
         <section class="case-system">
             <div class="case-label">03 — VISUAL SYSTEM</div>
             <div class="system-grid">
@@ -62,26 +56,16 @@
                 <div class="system-color"><span>PALETTE</span><div class="color-box black"><small>#080808</small></div><div class="color-box cream"><small>#E7D9D2</small></div></div>
             </div>
         </section>
-
         <section class="case-interaction">
             <div class="case-label">04 — DIRECTION</div>
-            <div>
-                <h2>Every page<br>is a <i>frame.</i></h2>
-                <p>The cover establishes the visual language for the full issue: cinematic imagery, oversized type and a controlled rhythm between dense information and empty space.</p>
-                <div class="interaction-demo"><span>NOIR · ISSUE 001</span><strong>↗</strong></div>
-            </div>
+            <div><h2>Every page<br>is a <i>frame.</i></h2><p>The cover establishes the visual language for the full issue: cinematic imagery, oversized type and a controlled rhythm between dense information and empty space.</p><div class="interaction-demo"><span>NOIR · ISSUE 001</span><strong>↗</strong></div></div>
         </section>
-
         <section class="case-final">
             <div class="case-label">05 — FINAL</div>
             <h2>Night.<br><i>Motion.</i><br>NOIR.</h2>
             <p>A magazine identity built to feel tactile, cinematic and slightly dangerous, like a city you should probably not be walking through at 3 a.m.</p>
         </section>
-
-        <section class="project-next">
-            <div>NEXT PROJECT</div>
-            <a href="cards.html">Digital Cards ↗</a>
-        </section>
+        <section class="project-next"><div>NEXT PROJECT</div><a href="cards.html">Digital Cards ↗</a></section>
     </main>
 </body>
 </html>
