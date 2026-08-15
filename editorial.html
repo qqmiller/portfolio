@@ -1,71 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOIR — ISSUE 001 · Ksenia</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .noir-project{background:#090707;color:#e8dfda}.noir-hero{max-width:1200px;margin:auto}.noir-hero h1{letter-spacing:-.04em}.noir-hero h1 i{color:#b93b31;font-style:normal}.noir-cover-stage{min-height:90vh;padding:7vh 7vw 10vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 35%,rgba(137,42,32,.22),transparent 45%)}.noir-cover-frame{position:relative;width:min(520px,82vw);box-shadow:0 30px 90px rgba(0,0,0,.7),0 0 45px rgba(183,48,38,.12);transform:rotate(-1deg);transition:transform .6s cubic-bezier(.2,.8,.2,1),box-shadow .6s}.noir-cover-frame:hover{transform:rotate(0) translateY(-12px) scale(1.015);box-shadow:0 45px 110px rgba(0,0,0,.8),0 0 65px rgba(183,48,38,.2)}.noir-cover-frame img{display:block;width:100%;height:auto}.noir-cover-frame:after{content:"NOIR / ISSUE 001";position:absolute;bottom:-34px;left:0;font:10px/1 monospace;letter-spacing:.22em;color:#7c716d}.noir-project .case-overview,.noir-project .case-info,.noir-project .case-concept,.noir-project .case-system,.noir-project .case-interaction,.noir-project .case-final{max-width:1200px;margin-left:auto;margin-right:auto}.noir-project .case-label{color:#b93b31}.noir-project .case-copy h2 i,.noir-project .case-concept h2 i,.noir-project .case-interaction h2 i,.noir-project .case-final h2 i{color:#b93b31}.noir-project .interaction-demo{border-color:#55201c}.noir-project .interaction-demo strong{color:#b93b31}
-        @media(max-width:700px){.noir-cover-stage{min-height:auto;padding:4rem 1.2rem 7rem}.noir-cover-frame{width:min(440px,88vw)}.noir-cover-frame:after{font-size:8px}.noir-hero{padding-left:1.2rem;padding-right:1.2rem}}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOIR — ISSUE 001 · Piteeer!!</title>
+<link rel="stylesheet" href="style.css">
+<style>
+:root{--bg:#0a0909;--text:#f4f1ed;--muted:#8b8582;--red:#e62d2d;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box}.noir-page{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}.noir-page a{text-decoration:none;color:inherit}
+.noir-topbar{height:72px;background:#090909;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;padding:0 36px;position:relative;z-index:10}.noir-brand{font-size:15px;font-weight:700;letter-spacing:1.5px;white-space:nowrap}.noir-nav{margin-left:auto;display:flex;gap:58px;align-items:center}.noir-nav a,.noir-lang{font-size:11px;letter-spacing:.8px;color:#777;transition:.25s}.noir-nav a:hover,.noir-lang:hover{color:#fff}.noir-nav a.active{color:#fff;position:relative}.noir-nav a.active:after{content:"";position:absolute;width:5px;height:5px;background:var(--red);border-radius:50%;left:50%;bottom:-15px;transform:translateX(-50%)}.noir-lang{margin-left:45px;color:#9b9692}
+.noir-shell{max-width:1315px;margin:0 auto;padding:30px 65px 0}.noir-back{font-size:10px;color:#777;letter-spacing:.7px;display:inline-flex;gap:10px;margin:15px 0 52px}.noir-back:hover{color:#fff}
+.noir-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(440px,560px);gap:75px;align-items:start}.noir-copy{padding-top:40px}.noir-kicker{font-size:11px;color:var(--red);font-weight:600;letter-spacing:1px;margin-bottom:22px}.noir-title{font-family:'Arial Narrow',Arial,sans-serif;font-size:72px;line-height:.92;font-weight:300;letter-spacing:-4px;margin:0 0 16px}.noir-subtitle{font-size:15px;color:#777;letter-spacing:2px;margin-bottom:35px;text-transform:uppercase}.noir-description{max-width:510px;color:#a49e9b;font-size:14px;line-height:1.65;margin-bottom:42px}.noir-meta{display:grid;grid-template-columns:95px 170px 170px;gap:0;margin-bottom:42px}.noir-meta-item{border-right:1px solid var(--line);padding-right:28px;margin-right:28px}.noir-meta-item:last-child{border:0}.noir-meta-label{display:block;color:var(--red);font-size:10px;margin-bottom:10px}.noir-meta-value{color:#bdb7b3;font-size:13px;line-height:1.35}.noir-actions{display:flex;align-items:center;gap:48px}.noir-button{border:1px solid rgba(230,45,45,.75);padding:16px 26px;color:var(--red);font-size:11px;letter-spacing:.4px;display:inline-flex;gap:14px;align-items:center;transition:.25s}.noir-button:hover{background:var(--red);color:#080808}.noir-next{font-size:11px;color:#8a8581;letter-spacing:.6px}.noir-next span{font-size:20px;margin-left:10px}
+.noir-cover-wrap{position:relative}.noir-cover{width:100%;display:block;border:1px solid rgba(230,45,45,.35);box-shadow:0 30px 90px rgba(0,0,0,.55)}.noir-cover-caption{position:absolute;right:-4px;bottom:145px;font-size:9px;letter-spacing:3px;color:#7c7672;writing-mode:vertical-rl;transform:rotate(180deg)}
+.noir-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:38px;max-width:560px}.noir-thumb{aspect-ratio:1.45;border:1px solid rgba(255,255,255,.12);background:#161313;overflow:hidden;position:relative}.noir-thumb:first-child{border-color:var(--red)}.noir-thumb img{width:100%;height:100%;object-fit:cover;display:block}.noir-thumb:nth-child(2) img{filter:grayscale(.25) brightness(.75);object-position:20% 45%}.noir-thumb:nth-child(3) img{filter:grayscale(.6) brightness(.7);object-position:75% 60%}.noir-thumb:nth-child(4) img{filter:grayscale(.35) brightness(.65);object-position:50% 80%}
+.noir-footer{max-width:1315px;margin:28px auto 0;padding:15px 65px 22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;color:#777;font-size:10px}.noir-social{display:flex;gap:30px}.noir-social a:hover{color:#fff}
+@media(max-width:900px){.noir-nav{gap:24px}.noir-nav a:nth-child(3){display:none}.noir-lang{margin-left:18px}.noir-main{grid-template-columns:1fr;gap:55px}.noir-copy{padding-top:0}.noir-title{font-size:64px}.noir-cover-wrap{max-width:560px}.noir-shell{padding:25px 28px 0}.noir-footer{padding-left:28px;padding-right:28px}}
+@media(max-width:600px){.noir-topbar{height:62px;padding:0 18px}.noir-brand{font-size:12px}.noir-nav{display:none}.noir-lang{margin-left:auto}.noir-shell{padding:22px 18px 0}.noir-back{margin:10px 0 35px}.noir-main{gap:40px}.noir-title{font-size:50px;letter-spacing:-3px}.noir-subtitle{font-size:11px}.noir-description{font-size:13px;margin-bottom:30px}.noir-meta{grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:30px}.noir-meta-item{padding-right:10px;margin-right:10px}.noir-meta-value{font-size:11px}.noir-actions{gap:20px;flex-wrap:wrap}.noir-button{padding:13px 17px}.noir-next{font-size:10px}.noir-thumbs{margin-top:28px}.noir-footer{margin-top:25px;padding:14px 18px 18px;font-size:8px}.noir-social{gap:12px}}
+</style>
 </head>
-<body class="project-page noir-project">
-    <div class="noise"></div>
-    <header class="project-header">
-        <a href="index.html" class="project-back">← ALL WORKS</a>
-        <div class="project-header-number">01 / 05</div>
-    </header>
-    <main>
-        <section class="case-hero noir-hero">
-            <div class="case-meta">PRINT DESIGN · PERSONAL PROJECT · 2026</div>
-            <h1>NOIR <i>— ISSUE 001</i></h1>
-            <div class="case-intro">
-                <p>A visual journal of urban life. A magazine concept built around neon streets, night drives and the quiet tension of a city that never really sleeps.</p>
-                <span>ART DIRECTION · EDITORIAL · TYPOGRAPHY</span>
-            </div>
-        </section>
-        <section class="noir-cover-stage">
-            <div class="noir-cover-frame">
-                <img src="assets/noir-cover.jpg" alt="NOIR Issue 001 magazine cover">
-            </div>
-        </section>
-        <section class="case-overview">
-            <div class="case-label">01 — OVERVIEW</div>
-            <div class="case-copy">
-                <h2>The city is <i>alive.</i></h2>
-                <p>NOIR is an editorial experiment about the visual language of a city after dark. Neon, old cars, reflections and blurred lights become the raw material for a cinematic magazine identity.</p>
-                <p>The cover uses oversized vertical typography against a deliberately imperfect photograph. The closer you look, the more details appear.</p>
-            </div>
-        </section>
-        <section class="case-info">
-            <div><span>ROLE</span><strong>Art Direction<br>Editorial Design<br>Typography</strong></div>
-            <div><span>YEAR</span><strong>2026</strong></div>
-            <div><span>TOOLS</span><strong>Figma<br>Photoshop<br>InDesign</strong></div>
-            <div><span>TYPE</span><strong>Magazine<br>Cover</strong></div>
-        </section>
-        <section class="case-concept">
-            <div class="case-label">02 — CONCEPT</div>
-            <div><h2>Look closer.<br><i>The city is alive.</i></h2><p>The visual direction treats the cover like a film still: warm street light, deep shadows, grain and restrained typography create a late-night atmosphere without over-explaining it.</p></div>
-        </section>
-        <section class="case-system">
-            <div class="case-label">03 — VISUAL SYSTEM</div>
-            <div class="system-grid">
-                <div class="system-type"><span>TYPE</span><h3>Condensed Sans</h3><p>Large vertical letterforms create a strong editorial spine and frame the photograph.</p></div>
-                <div class="system-type serif"><span>DETAIL</span><h3>Monospace</h3><p>Technical microtype adds a raw, archival feeling to the publication.</p></div>
-                <div class="system-color"><span>PALETTE</span><div class="color-box black"><small>#080808</small></div><div class="color-box cream"><small>#E7D9D2</small></div></div>
-            </div>
-        </section>
-        <section class="case-interaction">
-            <div class="case-label">04 — DIRECTION</div>
-            <div><h2>Every page<br>is a <i>frame.</i></h2><p>The cover establishes the visual language for the full issue: cinematic imagery, oversized type and a controlled rhythm between dense information and empty space.</p><div class="interaction-demo"><span>NOIR · ISSUE 001</span><strong>↗</strong></div></div>
-        </section>
-        <section class="case-final">
-            <div class="case-label">05 — FINAL</div>
-            <h2>Night.<br><i>Motion.</i><br>NOIR.</h2>
-            <p>A magazine identity built to feel tactile, cinematic and slightly dangerous, like a city you should probably not be walking through at 3 a.m.</p>
-        </section>
-        <section class="project-next"><div>NEXT PROJECT</div><a href="cards.html">Digital Cards ↗</a></section>
-    </main>
+<body class="noir-page">
+<header class="noir-topbar">
+  <a class="noir-brand" href="index.html">PITEEER!! 🦅🦅</a>
+  <nav class="noir-nav"><a class="active" href="index.html#works">WORKS</a><a href="index.html#about">ABOUT</a><a href="index.html#skills">SKILLS</a><a href="index.html#contact">CONTACT</a></nav>
+  <a class="noir-lang" href="index.html">RU / EN</a>
+</header>
+<main class="noir-shell">
+  <a class="noir-back" href="index.html#works">← <span>ALL WORKS</span></a>
+  <section class="noir-main">
+    <div class="noir-copy">
+      <div class="noir-kicker">PRINT DESIGN</div>
+      <h1 class="noir-title">NOIR — ISSUE 001</h1>
+      <div class="noir-subtitle">A VISUAL JOURNAL OF URBAN LIFE</div>
+      <p class="noir-description">Концепция журнала о городе, который живёт ночью. Неон, улицы, машины, люди — всё, что создаёт атмосферу и пульс мегаполиса. Обложка передаёт ощущение близости: чем ближе ты смотришь, тем больше замечаешь деталей.</p>
+      <div class="noir-meta"><div class="noir-meta-item"><span class="noir-meta-label">YEAR</span><span class="noir-meta-value">2026</span></div><div class="noir-meta-item"><span class="noir-meta-label">TOOLS</span><span class="noir-meta-value">Photoshop, InDesign</span></div><div class="noir-meta-item"><span class="noir-meta-label">TYPE</span><span class="noir-meta-value">Magazine Cover</span></div></div>
+      <div class="noir-actions"><a class="noir-button" href="#cover">◉ &nbsp; VIEW FULL PROJECT</a><a class="noir-next" href="cards.html">NEXT PROJECT <span>→</span></a></div>
+    </div>
+    <div class="noir-cover-wrap" id="cover">
+      <img class="noir-cover" src="assets/noir-cover.jpg" alt="NOIR Issue 001 magazine cover">
+      <div class="noir-cover-caption">ISSUE 001</div>
+      <div class="noir-thumbs"><div class="noir-thumb"><img src="assets/noir-cover.jpg" alt="NOIR cover"></div><div class="noir-thumb"><img src="assets/noir-cover.jpg" alt="NOIR editorial detail"></div><div class="noir-thumb"><img src="assets/noir-cover.jpg" alt="NOIR editorial detail"></div><div class="noir-thumb"><img src="assets/noir-cover.jpg" alt="NOIR editorial detail"></div></div>
+    </div>
+  </section>
+</main>
+<footer class="noir-footer"><span>© 2026 Piteeer!! All rights reserved.</span><div class="noir-social"><a href="#">BEHANCE</a><a href="#">INSTAGRAM</a><a href="mailto:hello@ksenia.design">EMAIL</a></div></footer>
 </body>
 </html>
