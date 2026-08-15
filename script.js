@@ -1,15 +1,6 @@
-/* LOADER */
-const loader = document.getElementById("loader");
+/* ENTRANCE */
 const main = document.getElementById("main");
-
-setTimeout(() => {
-    loader?.classList.add("hide");
-    main?.classList.add("show");
-}, 1600);
-
-setTimeout(() => {
-    if (loader) loader.style.display = "none";
-}, 2500);
+if (main) main.classList.add("show");
 
 /* CURSOR LIGHT */
 const cursorLight = document.querySelector(".cursor-light");
