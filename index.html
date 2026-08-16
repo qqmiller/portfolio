@@ -7,22 +7,32 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="overrides.css">
     <style>
-        .project-image-noir{background-image:url('assets/noiir.png')!important;background-size:cover;background-position:center}
-        .project-image-noir>span{display:none}
-        .works{padding-top:100px;padding-bottom:100px}
-        .section-top{margin-bottom:48px}
-        .project{display:block;padding:0 0 30px;margin:0 0 30px;border-bottom:1px solid rgba(0,0,0,.13)}
-        .project:hover{padding-left:0;padding-right:0}
-        .project-number{display:none}
-        .project-content{display:block}
-        .project-image{aspect-ratio:4/3;border-radius:0}
-        .project-image span{display:none}
-        .project-info{padding-top:16px}
-        .project-info h3{font-size:24px;letter-spacing:-.4px}
-        .project-category{margin-bottom:8px}
-        @media(min-width:800px){.works>.project{display:inline-block;vertical-align:top;width:calc(50% - 17px);margin-right:30px}.works>.project:nth-of-type(odd){margin-right:0}}
-        @media(min-width:1200px){.works>.project{width:calc(33.333% - 21px);margin-right:28px}.works>.project:nth-of-type(odd){margin-right:28px}.works>.project:nth-of-type(3n){margin-right:0}}
-        @media(max-width:799px){.works{padding:80px 24px}.project{margin-bottom:28px;padding-bottom:28px}.project-image{aspect-ratio:1.2}.project-info h3{font-size:22px}}
+        /* WORKS — editorial index */
+        .works-redesign{min-height:100vh;padding:120px 7vw 140px;background:#f0ede6;color:#111;display:grid;grid-template-columns:28% 1fr;column-gap:8vw}
+        .works-redesign .works-intro{align-self:start;position:sticky;top:90px}
+        .works-redesign .works-kicker{font-size:10px;letter-spacing:2px;opacity:.45;margin-bottom:28px}
+        .works-redesign .works-title{font-size:clamp(48px,6vw,92px);font-weight:300;line-height:.9;letter-spacing:-4px;margin:0 0 28px}
+        .works-redesign .works-title i{font-family:Georgia,serif;font-weight:normal}
+        .works-redesign .works-note{max-width:250px;font-size:12px;line-height:1.7;color:#777}
+        .works-list{border-top:1px solid rgba(0,0,0,.16)}
+        .works-redesign .project{position:relative;display:grid;grid-template-columns:1fr auto;align-items:center;min-height:112px;padding:0;border-bottom:1px solid rgba(0,0,0,.16);text-decoration:none;color:#111;overflow:visible;opacity:1;transform:none;transition:padding .35s ease}
+        .works-redesign .project:hover{padding:0 18px}
+        .works-redesign .project-main{display:flex;align-items:baseline;gap:28px;min-width:0}
+        .works-redesign .project-number{display:block;width:28px;font-size:9px;letter-spacing:1px;opacity:.35}
+        .works-redesign .project-category{display:block;font-size:9px;letter-spacing:1.8px;opacity:.45;margin:0 0 8px}
+        .works-redesign .project-info h3{font-size:clamp(24px,3vw,42px);font-weight:300;letter-spacing:-1.5px;margin:0;transition:transform .35s ease}
+        .works-redesign .project:hover .project-info h3{transform:translateX(8px)}
+        .works-redesign .project-year{font-size:10px;opacity:.4;align-self:center}
+        .works-redesign .project-arrow{font-size:18px;margin-left:25px;opacity:.45;transition:transform .35s ease,opacity .35s ease}
+        .works-redesign .project:hover .project-arrow{transform:translate(5px,-5px);opacity:1}
+        .works-redesign .project-preview{position:absolute;right:55px;top:50%;width:250px;height:170px;transform:translateY(-50%) translateX(25px) rotate(2deg);opacity:0;pointer-events:none;background-size:cover;background-position:center;box-shadow:0 18px 45px rgba(0,0,0,.18);transition:opacity .35s ease,transform .45s cubic-bezier(.16,1,.3,1);z-index:5}
+        .works-redesign .project:hover .project-preview{opacity:1;transform:translateY(-50%) translateX(0) rotate(0)}
+        .works-redesign .preview-noir{background-image:url('assets/noiir.png')}
+        .works-redesign .preview-cards{background:linear-gradient(135deg,#181818,#393939)}
+        .works-redesign .preview-covers{background:linear-gradient(135deg,#271b1b,#a34635)}
+        .works-redesign .preview-branding{background:linear-gradient(135deg,#ddd8cf,#222)}
+        .works-redesign .preview-art{background:linear-gradient(135deg,#101010,#555)}
+        @media(max-width:850px){.works-redesign{grid-template-columns:1fr;row-gap:55px;padding:90px 28px 100px}.works-redesign .works-intro{position:static}.works-redesign .works-note{max-width:360px}.works-redesign .project{min-height:92px}.works-redesign .project-main{gap:16px}.works-redesign .project-number{width:20px}.works-redesign .project-preview{display:none}.works-redesign .project-info h3{font-size:25px}.works-redesign .project:hover{padding:0}.works-redesign .project:hover .project-info h3{transform:none}}
     </style>
 </head>
 <body>
@@ -46,13 +56,34 @@
 </section>
 <footer class="footer"><span data-ru="ЛИСТАЙТЕ, ЧТОБЫ СМОТРЕТЬ" data-en="SCROLL TO EXPLORE">ЛИСТАЙТЕ, ЧТОБЫ СМОТРЕТЬ</span><div class="scroll-line"><span></span></div></footer>
 </main>
-<section class="works" id="works">
-<div class="section-top"><span class="section-number">01</span><span class="section-label" data-ru="ИЗБРАННЫЕ РАБОТЫ" data-en="SELECTED WORKS">ИЗБРАННЫЕ РАБОТЫ</span></div>
-<a href="editorial.html" class="project"><div class="project-number">01</div><div class="project-content"><div class="project-image project-image-noir"><span>01</span><div class="project-image-overlay"><span>MAGAZINE</span></div></div><div class="project-info"><div><span class="project-category" data-ru="EDITORIAL · ЖУРНАЛЫ" data-en="EDITORIAL · MAGAZINES">EDITORIAL · ЖУРНАЛЫ</span><h3>NOIR — ISSUE 001</h3></div><span class="project-year">2026</span></div></div></a>
-<a href="cards.html" class="project"><div class="project-number">02</div><div class="project-content"><div class="project-image project-image-02"><span>02</span><div class="project-image-overlay"><span>DIGITAL</span></div></div><div class="project-info"><div><span class="project-category" data-ru="DIGITAL · КАРТОЧКИ" data-en="DIGITAL · CARDS">DIGITAL · КАРТОЧКИ</span><h3>Digital Cards</h3></div><span class="project-year">2026</span></div></div></a>
-<a href="covers.html" class="project"><div class="project-number">03</div><div class="project-content"><div class="project-image project-image-03"><span>03</span><div class="project-image-overlay"><span>COVER</span></div></div><div class="project-info"><div><span class="project-category" data-ru="ОБЛОЖКИ · ПОСТЕРЫ" data-en="COVERS · POSTERS">ОБЛОЖКИ · ПОСТЕРЫ</span><h3>Cover Design</h3></div><span class="project-year">2026</span></div></div></a>
-<a href="branding.html" class="project"><div class="project-number">04</div><div class="project-content"><div class="project-image project-image-01"><span>04</span><div class="project-image-overlay"><span>IDENTITY</span></div></div><div class="project-info"><div><span class="project-category" data-ru="АЙДЕНТИКА · БРЕНДИНГ" data-en="IDENTITY · BRANDING">АЙДЕНТИКА · БРЕНДИНГ</span><h3>Brand Identity</h3></div><span class="project-year">2026</span></div></div></a>
-<a href="art-direction.html" class="project"><div class="project-number">05</div><div class="project-content"><div class="project-image project-image-02"><span>05</span><div class="project-image-overlay"><span>ART DIRECTION</span></div></div><div class="project-info"><div><span class="project-category" data-ru="АРТ-ДИРЕКШН · ВИЗУАЛ" data-en="ART DIRECTION · VISUAL">АРТ-ДИРЕКШН · ВИЗУАЛ</span><h3>Visual Experiments</h3></div><span class="project-year">2026</span></div></div></a>
+<section class="works-redesign" id="works">
+    <div class="works-intro">
+        <div class="works-kicker">01 · SELECTED WORKS</div>
+        <h2 class="works-title">Избранные<br><i>работы</i></h2>
+        <p class="works-note" data-ru="Небольшая подборка визуальных проектов: editorial, digital и branding." data-en="A small selection of visual projects: editorial, digital and branding.">Небольшая подборка визуальных проектов: editorial, digital и branding.</p>
+    </div>
+    <div class="works-list">
+        <a href="editorial.html" class="project">
+            <div class="project-main"><span class="project-number">01</span><div class="project-info"><span class="project-category">EDITORIAL · ЖУРНАЛЫ</span><h3>NOIR — ISSUE 001</h3></div></div>
+            <div class="project-year">2026 <span class="project-arrow">↗</span></div><div class="project-preview preview-noir"></div>
+        </a>
+        <a href="cards.html" class="project">
+            <div class="project-main"><span class="project-number">02</span><div class="project-info"><span class="project-category">DIGITAL · CARDS</span><h3>Digital Cards</h3></div></div>
+            <div class="project-year">2026 <span class="project-arrow">↗</span></div><div class="project-preview preview-cards"></div>
+        </a>
+        <a href="covers.html" class="project">
+            <div class="project-main"><span class="project-number">03</span><div class="project-info"><span class="project-category">COVERS · POSTERS</span><h3>Cover Design</h3></div></div>
+            <div class="project-year">2026 <span class="project-arrow">↗</span></div><div class="project-preview preview-covers"></div>
+        </a>
+        <a href="branding.html" class="project">
+            <div class="project-main"><span class="project-number">04</span><div class="project-info"><span class="project-category">IDENTITY · BRANDING</span><h3>Brand Identity</h3></div></div>
+            <div class="project-year">2026 <span class="project-arrow">↗</span></div><div class="project-preview preview-branding"></div>
+        </a>
+        <a href="art-direction.html" class="project">
+            <div class="project-main"><span class="project-number">05</span><div class="project-info"><span class="project-category">ART DIRECTION · VISUAL</span><h3>Visual Experiments</h3></div></div>
+            <div class="project-year">2026 <span class="project-arrow">↗</span></div><div class="project-preview preview-art"></div>
+        </a>
+    </div>
 </section>
 <section class="about" id="about"><div><span class="about-label" data-ru="02 · ОБО МНЕ" data-en="02 · ABOUT">02 · ОБО МНЕ</span></div><div><h2><span data-ru="Визуальный" data-en="Visual">Визуальный</span><br><i data-ru="дизайн" data-en="design">дизайн</i></h2><p class="about-text" data-ru="Я создаю визуальные концепции, цифровые интерфейсы и графические проекты. Мне интересны типографика, композиция, кинематографичный визуальный язык и эксперименты с формой." data-en="I create visual concepts, digital interfaces and graphic projects. I am interested in typography, composition, cinematic visual language and experiments with form.">Я создаю визуальные концепции, цифровые интерфейсы и графические проекты. Мне интересны типографика, композиция, кинематографичный визуальный язык и эксперименты с формой.</p></div></section>
 <section class="contact" id="contact"><div><span class="contact-label" data-ru="03 · КОНТАКТ" data-en="03 · CONTACT">03 · КОНТАКТ</span></div><div><h2><span data-ru="Давайте" data-en="Let's">Давайте</span><br><i data-ru="создадим" data-en="create">создадим</i><br><span data-ru="что-то." data-en="something.">что-то.</span></h2><a href="mailto:hello@ksenia.design" class="email">hello@ksenia.design</a></div></section>
