@@ -17,3 +17,8 @@
 @media(max-width:850px){.works-grid{grid-template-columns:1fr!important;gap:30px!important;padding:44px 0 0!important}.works-card:nth-child(3){grid-column:auto!important;width:100%!important}.works-image{aspect-ratio:1.5!important;min-height:0!important}.works-card-label{padding:22px!important}.works-card-title{font-size:clamp(28px,8vw,42px)!important}.works-card-arrow{font-size:23px!important}.works-mark{width:42px!important;height:42px!important}}
 
 @media(max-width:700px){.project-image-overlay{min-width:120px;padding:12px 16px}.project-image-overlay span{font-size:9px;letter-spacing:2px}}
+
+/* New category artwork */
+.works-image.grunge{background-image:url('assets/grange.png')!important}
+.works-image.modern{background-image:url('assets/modern.png')!important}
+.works-image.artistic{background-image:url('assets/artistic.png')!important}
