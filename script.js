@@ -1,10 +1,12 @@
-/* ENTRANCE LOADER: show only on the first visit of the tab */
+/* ENTRANCE LOADER */
 const loader = document.getElementById("loader");
 const main = document.getElementById("main");
 if (loader && main) {
     const hasSeenLoader = sessionStorage.getItem("portfolio-loader-seen");
-    if (hasSeenLoader) { loader.style.display = "none"; main.classList.add("show"); }
-    else {
+    if (hasSeenLoader) {
+        loader.style.display = "none";
+        main.classList.add("show");
+    } else {
         sessionStorage.setItem("portfolio-loader-seen", "true");
         setTimeout(() => { loader.classList.add("hide"); main.classList.add("show"); }, 1600);
         setTimeout(() => { loader.style.display = "none"; }, 2500);
@@ -54,7 +56,7 @@ function revealProjects() {
 window.addEventListener("scroll", revealProjects, { passive: true });
 revealProjects();
 
-/* ABOUT EDITORIAL FIX */
+/* ABOUT EDITORIAL */
 const aboutStyle = document.createElement("style");
 aboutStyle.textContent = `
 .about{min-height:100svh!important;padding:120px 7vw 110px!important;display:grid!important;grid-template-columns:.55fr 1.55fr .9fr!important;gap:5vw!important;align-items:center!important;background:#efede8!important;color:#241e1e!important;position:relative!important;overflow:hidden!important}
@@ -63,35 +65,44 @@ aboutStyle.textContent = `
 `;
 document.head.appendChild(aboutStyle);
 
-/* HOME: quiet, premium editorial cover */
+/* HOME — minimal editorial cover */
 const homeStyle = document.createElement("style");
 homeStyle.textContent = `
-#main{min-height:100svh!important;height:100svh!important;padding:28px 52px 32px!important;background:#090909!important;color:#f4f0e9!important;overflow:hidden!important}
-.header{position:relative!important;z-index:20!important}.logo{font-size:10px!important;letter-spacing:3px!important}.navigation{gap:30px!important}.navigation a{font-size:9px!important;letter-spacing:1.8px!important}
-.hero{height:calc(100svh - 82px)!important;max-width:1240px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;position:relative!important;z-index:2!important}.hero .eyebrow,.hero-language,.hero-scroll-mark,.availability,.footer{display:none!important}
-.hero h1{margin:-20px 0 0!important;display:block!important;font-family:Georgia,'Times New Roman',serif!important;font-weight:400!important;font-size:clamp(62px,8.6vw,128px)!important;line-height:.86!important;letter-spacing:-5px!important;max-width:930px!important}
-.hero h1 span{display:block!important;margin:0!important;font-family:Georgia,'Times New Roman',serif!important;font-style:normal!important;font-weight:400!important;letter-spacing:-5px!important}
-.hero h1 span:nth-child(1){font-size:1em!important}.hero h1 span:nth-child(2){font-size:.82em!important;margin-left:7vw!important}.hero h1 span:nth-child(3){font:500 9px/1.2 Arial,Helvetica,sans-serif!important;letter-spacing:3px!important;margin:34px 0 0 7.2vw!important;color:rgba(255,255,255,.5)!important}
-.description{max-width:340px!important;margin:34px 0 0 7.2vw!important;font:400 12px/1.65 Arial,Helvetica,sans-serif!important;color:rgba(255,255,255,.5)!important}
-#main:after{content:"SAMARA / RUSSIA     2026"!important;position:absolute!important;right:52px!important;bottom:29px!important;font:8px Arial,sans-serif!important;letter-spacing:2px!important;color:rgba(255,255,255,.3)!important}.hero:after{content:"53.1956° N, 50.1001° E"!important;position:absolute!important;left:0!important;bottom:0!important;font:8px Arial,sans-serif!important;letter-spacing:2px!important;color:rgba(255,255,255,.25)!important}#main:before{content:""!important;position:absolute!important;left:52%!important;top:38%!important;width:1px!important;height:150px!important;background:linear-gradient(transparent,rgba(130,42,42,.75),transparent)!important;opacity:.65!important}
+#main{min-height:100svh!important;height:100svh!important;padding:28px 52px 32px!important;background:#090909!important;color:#f4f0e9!important;overflow:hidden!important;position:relative!important}
+#main>.header,#main>.hero{position:relative!important;z-index:3!important}.header{position:relative!important;z-index:20!important}.logo{font-size:10px!important;letter-spacing:3px!important}.navigation{gap:30px!important}.navigation a{font-size:9px!important;letter-spacing:1.8px!important}
+#main:after{content:"SAMARA / RUSSIA     2026"!important;position:absolute!important;right:52px!important;bottom:29px!important;font:8px Arial,sans-serif!important;letter-spacing:2px!important;color:rgba(255,255,255,.3)!important;z-index:3!important}
+#main:before{content:""!important;position:absolute!important;inset:0!important;z-index:0!important;pointer-events:none!important;background:radial-gradient(circle at 67% 53%,rgba(94,44,42,.22),transparent 27%),radial-gradient(circle at 15% 80%,rgba(255,255,255,.035),transparent 26%),linear-gradient(112deg,#070707 0%,#0d0d0d 48%,#080808 100%)!important}
+#main .hero{height:calc(100svh - 82px)!important;width:100%!important;max-width:1240px!important;margin:0 auto!important;display:flex!important;flex-direction:column!important;justify-content:center!important;position:relative!important;z-index:2!important}
+.hero .eyebrow,.hero-language,.hero-scroll-mark,.availability,.footer{display:none!important}
+.hero h1{margin:-25px 0 0!important;display:block!important;font-family:Georgia,'Times New Roman',serif!important;font-weight:400!important;font-size:clamp(62px,7.5vw,116px)!important;line-height:.86!important;letter-spacing:-4px!important;max-width:1000px!important;color:#f4f0e9!important}
+.hero h1 span{display:block!important;margin:0!important;font-family:Georgia,'Times New Roman',serif!important;font-style:normal!important;font-weight:400!important;letter-spacing:-4px!important}
+.hero h1 span:nth-child(1){font-size:1em!important}.hero h1 span:nth-child(2){font-size:.86em!important;margin-left:7vw!important}.hero h1 span:nth-child(3){font:500 9px/1.2 Arial,Helvetica,sans-serif!important;letter-spacing:3px!important;margin:32px 0 0 7.2vw!important;color:rgba(255,255,255,.47)!important}
+.description{max-width:360px!important;margin:30px 0 0 7.2vw!important;font:400 12px/1.7 Arial,Helvetica,sans-serif!important;color:rgba(255,255,255,.48)!important}
+.hero:before{content:"53.1956° N, 50.1001° E"!important;position:absolute!important;left:0!important;bottom:0!important;font:8px Arial,sans-serif!important;letter-spacing:2px!important;color:rgba(255,255,255,.25)!important}
+.hero:after{content:""!important;position:absolute!important;left:50%!important;top:48%!important;width:1px!important;height:135px!important;background:linear-gradient(transparent,rgba(124,47,47,.8),transparent)!important;opacity:.55!important}
 .manifesto{display:none!important}
-@media(max-width:850px){#main{padding:22px 22px 26px!important}.navigation{gap:16px!important}.navigation a{font-size:8px!important}.hero{height:calc(100svh - 70px)!important}.hero h1{font-size:clamp(48px,13vw,82px)!important;letter-spacing:-3px!important}.hero h1 span{letter-spacing:-3px!important}.hero h1 span:nth-child(2){font-size:.82em!important;margin-left:8vw!important}.hero h1 span:nth-child(3){font-size:7px!important;margin:26px 0 0 8vw!important}.description{margin:26px 0 0 8vw!important;max-width:280px!important;font-size:10px!important}#main:after{right:22px!important;bottom:26px!important;font-size:7px!important}.hero:after{font-size:7px!important}}
+@media(max-width:850px){#main{padding:22px 22px 26px!important}.navigation{gap:16px!important}.navigation a{font-size:8px!important}.hero{height:calc(100svh - 70px)!important}.hero h1{font-size:clamp(50px,13vw,82px)!important;letter-spacing:-3px!important}.hero h1 span{letter-spacing:-3px!important}.hero h1 span:nth-child(2){font-size:.86em!important;margin-left:8vw!important}.hero h1 span:nth-child(3){font-size:7px!important;margin:25px 0 0 8vw!important}.description{margin:24px 0 0 8vw!important;max-width:280px!important;font-size:10px!important}.hero:before{font-size:7px!important}#main:after{right:22px!important;bottom:26px!important;font-size:7px!important}.hero:after{left:50%!important;height:100px!important}}
 `;
 document.head.appendChild(homeStyle);
 
-/* New home copy: short, calm and intentionally not name-led. */
+/* HOME COPY — always editorial/English, so the visual identity stays consistent in RU mode too. */
 const homeTitle = document.querySelector(".hero h1");
 if (homeTitle) {
     homeTitle.innerHTML = `<span data-ru="VISUAL STORIES" data-en="VISUAL STORIES">VISUAL STORIES</span><span data-ru="WITH A POINT OF VIEW." data-en="WITH A POINT OF VIEW.">WITH A POINT OF VIEW.</span><span data-ru="DIGITAL · EDITORIAL · ART DIRECTION" data-en="DIGITAL · EDITORIAL · ART DIRECTION">DIGITAL · EDITORIAL · ART DIRECTION</span>`;
 }
 const homeDescription = document.querySelector(".hero .description");
 if (homeDescription) {
-    homeDescription.setAttribute("data-ru", "Создаю образы, айдентику и цифровые проекты, где идея становится визуальным языком.");
+    homeDescription.setAttribute("data-ru", "Designing images, identities and digital experiences where ideas become visual language.");
     homeDescription.setAttribute("data-en", "Designing images, identities and digital experiences where ideas become visual language.");
 }
+
+/* Clean navigation order */
 const nav = document.querySelector(".navigation");
 if (nav) {
     const links = [...nav.querySelectorAll("a")];
-    ["#about","#works","#contact"].forEach((href) => { const link = links.find((item) => item.getAttribute("href") === href); if (link) nav.appendChild(link); });
+    ["#about","#works","#contact"].forEach((href) => {
+        const link = links.find((item) => item.getAttribute("href") === href);
+        if (link) nav.appendChild(link);
+    });
 }
 applyLanguage(localStorage.getItem("language") || "ru");
