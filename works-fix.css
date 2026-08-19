@@ -3,12 +3,18 @@
 .works-redesign{margin:0!important;transform:none!important;position:relative!important}
 .works-redesign .works-inner{margin:0 auto!important}
 
+/* Functional Works introduction */
+.works-guidance{display:flex!important;align-items:flex-end!important;gap:32px!important;margin-top:24px!important;max-width:780px!important}
+.works-guidance-index{flex:0 0 auto!important;font:500 8px/1 Arial,sans-serif!important;letter-spacing:2px!important;color:rgba(36,30,30,.42)!important;white-space:nowrap!important}
+.works-guidance p{margin:0!important;max-width:520px!important;font:400 11px/1.65 Arial,Helvetica,sans-serif!important;letter-spacing:.15px!important;color:rgba(36,30,30,.62)!important}
+
 /* Force the intended two-column Works layout. Safari Retina can report a surprisingly small CSS viewport. */
 .works-redesign .works-grid{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;column-gap:38px!important;row-gap:42px!important}
 .works-redesign .works-card:nth-child(3){grid-column:1 / span 2!important;width:min(58%,700px)!important;justify-self:center!important}
 
 /* Only truly narrow phones collapse to one column. */
 @media (max-width:600px){
+  .works-guidance{display:block!important;margin-top:20px!important}.works-guidance-index{display:block!important;margin-bottom:9px!important}.works-guidance p{max-width:320px!important;font-size:10px!important;line-height:1.6!important}
   .works-redesign .works-grid{grid-template-columns:1fr!important;column-gap:0!important;row-gap:28px!important}
   .works-redesign .works-card:nth-child(3){grid-column:auto!important;width:100%!important}
 }
