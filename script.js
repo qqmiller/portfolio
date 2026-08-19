@@ -1,6 +1,9 @@
 /* ENTRANCE LOADER */
-const loader=document.getElementById('loader'), main=document.getElementById('main');
-if(loader&&main){const seen=sessionStorage.getItem('portfolio-loader-seen');if(seen){loader.style.display='none';main.classList.add('show')}else{sessionStorage.setItem('portfolio-loader-seen','true');setTimeout(()=>{loader.classList.add('hide');main.classList.add('show')},1600);setTimeout(()=>loader.style.display='none',2500)}}else if(main)main.classList.add('show');
+const loader=document.getElementById('loader');
+const main=document.getElementById('main') || document.getElementById('top') || document.querySelector('main');
+if(loader){const seen=sessionStorage.getItem('portfolio-loader-seen');if(seen){loader.style.display='none';if(main)main.classList.add('show')}else{sessionStorage.setItem('portfolio-loader-seen','true');setTimeout(()=>{loader.classList.add('hide');if(main)main.classList.add('show')},1600);setTimeout(()=>loader.style.display='none',2500)}}else if(main)main.classList.add('show');
+
+/* CURSOR LIGHT */
 const cursorLight=document.querySelector('.cursor-light');document.addEventListener('mousemove',e=>{if(cursorLight){cursorLight.style.left=`${e.clientX}px`;cursorLight.style.top=`${e.clientY}px`}});
 
 /* RU / EN */
