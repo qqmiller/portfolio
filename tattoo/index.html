@@ -24,6 +24,19 @@
   <section class="page-section works" id="works" aria-label="Примеры работ"><a class="hotspot sketches-link" href="#sketches" aria-label="Перейти к эскизам"></a></section>
   <section class="page-section sketches" id="sketches" aria-label="Эскизы"><a class="hotspot contacts-link" href="#contacts" aria-label="Перейти к контактам"></a></section>
   <footer class="page-section contacts" id="contacts" aria-label="Контакты">
+    <div class="contact-form-wrap">
+      <div class="contact-copy">
+        <span class="contact-kicker">05 / GET IN TOUCH</span>
+        <h2>Свяжитесь<br><i>со мной.</i></h2>
+        <p>Расскажите идею татуировки, а я помогу превратить её в эскиз.</p>
+      </div>
+      <form class="tattoo-form" action="#contacts" method="post">
+        <label>ИМЯ / НИКНЕЙМ<input name="name" type="text" placeholder="Ваше имя или @username" autocomplete="name" required></label>
+        <label>ПОЧТА / TELEGRAM<input name="contact" type="text" placeholder="email@example.com / @username" required></label>
+        <label>ВАША ИДЕЯ<textarea name="idea" placeholder="Расскажите о татуировке: идея, размер, место на теле..." required></textarea></label>
+        <button type="submit">ОТПРАВИТЬ ЗАПРОС <span>↗</span></button>
+      </form>
+    </div>
     <a class="contact-phone" href="tel:+79284854020" aria-label="Позвонить"></a>
     <a class="contact-mail" href="mailto:qqmill@cloud.com" aria-label="Написать на почту"></a>
   </footer>
