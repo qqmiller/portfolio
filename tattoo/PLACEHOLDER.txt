@@ -1,0 +1,1 @@
+Assets are prepared locally. Binary image upload requires a file-capable GitHub write action; the connected GitHub API currently exposes blob creation only via inline content. Do not remove this note until the image assets are uploaded.
