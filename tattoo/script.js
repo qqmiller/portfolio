@@ -2,6 +2,7 @@ const transition = document.querySelector('.page-transition');
 const word = document.querySelector('.transition-word');
 const sub = document.querySelector('.transition-sub');
 const links = document.querySelectorAll('a[href^="#"]');
+const form = document.querySelector('.tattoo-form');
 const sections = {
   '#services': 'services',
   '#process': 'process',
@@ -74,7 +75,7 @@ function finishTransition(){
 
 window.addEventListener('load',()=>{
   replayAnimation('studio');
-  window.setTimeout(finishTransition, 1450);
+  window.setTimeout(finishTransition,1450);
 });
 
 links.forEach(link=>{
@@ -90,6 +91,14 @@ links.forEach(link=>{
     },520);
     window.setTimeout(finishTransition,1180);
   });
+});
+
+form?.addEventListener('submit',event=>{
+  event.preventDefault();
+  const button = form.querySelector('button');
+  button.classList.add('is-sent');
+  button.innerHTML = 'ЗАПРОС ПОЛУЧЕН <span>✓</span>';
+  button.disabled = true;
 });
 
 window.addEventListener('pageshow',event=>{
