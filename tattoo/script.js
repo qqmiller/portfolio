@@ -3,6 +3,8 @@ const word = document.querySelector('.transition-word');
 const sub = document.querySelector('.transition-sub');
 const links = document.querySelectorAll('a[href^="#"]');
 const form = document.querySelector('.tattoo-form');
+const contactScreen = document.querySelector('.contact-screen');
+const contactClose = document.querySelector('.contact-close');
 const sections = {
   '#services': 'services',
   '#process': 'process',
@@ -73,6 +75,28 @@ function finishTransition(){
   transition.style.pointerEvents = 'none';
 }
 
+function openContacts(){
+  if(!contactScreen) return;
+  replayAnimation('contacts');
+  window.setTimeout(()=>{
+    contactScreen.classList.add('is-open');
+    contactScreen.setAttribute('aria-hidden','false');
+    document.body.classList.add('contacts-open');
+  },520);
+  window.setTimeout(finishTransition,1180);
+}
+
+function closeContacts(){
+  if(!contactScreen) return;
+  replayAnimation('studio');
+  window.setTimeout(()=>{
+    contactScreen.classList.remove('is-open');
+    contactScreen.setAttribute('aria-hidden','true');
+    document.body.classList.remove('contacts-open');
+  },520);
+  window.setTimeout(finishTransition,1180);
+}
+
 window.addEventListener('load',()=>{
   replayAnimation('studio');
   window.setTimeout(finishTransition,1450);
@@ -81,6 +105,11 @@ window.addEventListener('load',()=>{
 links.forEach(link=>{
   link.addEventListener('click',event=>{
     const selector = link.getAttribute('href');
+    if(selector === '#contacts'){
+      event.preventDefault();
+      openContacts();
+      return;
+    }
     const target = document.querySelector(selector);
     if(!target || !transition) return;
     event.preventDefault();
@@ -93,12 +122,18 @@ links.forEach(link=>{
   });
 });
 
+contactClose?.addEventListener('click',closeContacts);
+
 form?.addEventListener('submit',event=>{
   event.preventDefault();
   const button = form.querySelector('button');
   button.classList.add('is-sent');
   button.innerHTML = 'ЗАПРОС ПОЛУЧЕН <span>✓</span>';
   button.disabled = true;
+});
+
+window.addEventListener('keydown',event=>{
+  if(event.key === 'Escape' && contactScreen?.classList.contains('is-open')) closeContacts();
 });
 
 window.addEventListener('pageshow',event=>{
