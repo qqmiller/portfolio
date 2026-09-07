@@ -2,6 +2,6 @@
 
 ## Tattoo Studio concept
 
-A responsive tattoo studio landing page with editorial art direction, animated details, service/process sections, selected works and booking form.
+Responsive tattoo studio landing page with editorial art direction, animated details, services, process, selected works and booking form.
 
-The project lives in `tattoo/`.
+Project: `tattoo/`
