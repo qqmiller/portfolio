@@ -1,9 +1,33 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tattoo Studio — Make it permanent</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><div class="grain"></div><div class="cursor"></div>
-<header><a href="#top" class="brand">TATTOO<sup>®</sup></a><nav><a href="#services">Услуги</a><a href="#process">Процесс</a><a href="#works">Работы</a><a href="#booking">Запись</a></nav><button class="hamb"><span></span><span></span></button></header>
-<main id="top"><section class="hero"><div class="rings r1"></div><div class="rings r2"></div><img class="hero-flower" src="assets/flowers.webp"><div class="hero-text"><div class="eyebrow">TATTOO STUDIO / SAMARA</div><h1>TIME<br><i>IS</i><br>IMPORTANT</h1><p>MAKE IT PERMANENT.</p></div><img class="sigil" src="assets/red-sigil.webp"><div class="scroll">SCROLL ↓</div></section>
-<section class="manifest"><div class="tag">01 / STUDIO</div><div><h2>Сохрани<br><i>память.</i></h2><p>Татуировки, созданные вокруг вашей идеи, тела и истории. Никаких шаблонов. Только индивидуальная работа.</p></div><img src="assets/butterflies.webp" class="butterflies"></section>
-<section id="services" class="services"><div class="tag">02 / SERVICES</div><h2>Что мы<br><i>делаем</i></h2><div class="service-grid"><article><span>01</span><h3>ИНДИВИДУАЛЬНЫЙ<br>ЭСКИЗ</h3><p>Создаём композицию с нуля под вас.</p><b>↗</b></article><article><span>02</span><h3>ТАТУИРОВКА</h3><p>Fine line / Blackwork / Ornamental.</p><b>↗</b></article><article><span>03</span><h3>ПЕРЕКРЫТИЕ<br>И КОРРЕКЦИЯ</h3><p>Новая история вместо старой.</p><b>↗</b></article><article><span>04</span><h3>КОНСУЛЬТАЦИЯ</h3><p>Размер, место, стиль и идея.</p><b>↗</b></article></div></section>
-<section id="process" class="process"><div class="time-art"><img src="assets/time.webp"><div class="time-line">YOUR STORY<br>STARTS HERE</div></div><div class="process-info"><div class="tag">03 / PROCESS</div><h2>Как происходит<br><i>весь процесс?</i></h2><ol><li><b>01</b>Вы записываетесь на приём</li><li><b>02</b>Консультируемся</li><li><b>03</b>Обсуждаем идею и цель работы</li><li><b>04</b>Определяемся с датой</li></ol><a class="btn" href="#booking">BOOK A SESSION <span>↗</span></a></div></section>
-<section id="works" class="works"><div class="tag">04 / SELECTED WORKS</div><div class="works-head"><h2>Эскизы<br><i>и следы.</i></h2><img src="assets/eye.webp"></div><div class="gallery"><figure class="large"><img src="assets/torso.webp"><figcaption>ORNAMENTAL / 01</figcaption></figure><figure><img src="assets/flowers.webp"><figcaption>FINE LINE / 02</figcaption></figure><figure><img src="assets/butterflies.webp"><figcaption>BLACKWORK / 03</figcaption></figure><figure class="wide"><img src="assets/sketchbook.webp"><figcaption>CUSTOM / 04</figcaption></figure></div></section>
-<section class="visual"><img src="assets/stars.webp"><div><span>“</span><p>Some memories<br>deserve to become<br><i>permanent.</i></p><small>— TATTOO STUDIO</small></div></section>
-<section id="booking" class="booking"><div><div class="tag">05 / BOOKING</div><h2>Давай оставим<br><i>что-нибудь</i><br>навсегда.</h2></div><form><label>ИМЯ<input placeholder="Ваше имя"></label><label>КОНТАКТ<input placeholder="@telegram / телефон"></label><label>ИДЕЯ<textarea placeholder="Расскажите о татуировке"></textarea></label><button class="btn">ОТПРАВИТЬ ЗАПРОС <span>↗</span></button></form></section></main><footer><div class="brand">TATTOO<sup>®</sup></div><div><small>CONTACT</small><br>+7 928 485 40 20<br>qqmill@cloud.com</div><div><small>STUDIO</small><br>SAMARA / RUSSIA<br>BY APPOINTMENT ONLY</div><div class="star">✦</div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ececec">
+<title>Tattoo studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-transition" aria-hidden="true">
+  <div class="transition-ring"></div>
+  <div class="transition-word">Tattoo</div>
+  <div class="transition-sub">studio</div>
+  <div class="transition-line"></div>
+</div>
+<main class="tattoo-page" id="top" aria-label="Tattoo studio">
+  <nav class="access-nav" aria-label="Навигация по сайту">
+    <a href="#services">Услуги</a><a href="#process">Процесс</a><a href="#works">Работы</a><a href="#sketches">Эскизы</a><a href="#contacts">Контакты</a>
+  </nav>
+  <section class="page-section hero" id="home" aria-label="Главная"><a class="hotspot services-link" href="#services" aria-label="Перейти к услугам"></a></section>
+  <section class="page-section memory" id="services" aria-label="Услуги"><a class="hotspot process-link" href="#process" aria-label="Перейти к процессу"></a></section>
+  <section class="page-section process" id="process" aria-label="Процесс"><a class="hotspot works-link" href="#works" aria-label="Перейти к работам"></a></section>
+  <section class="page-section works" id="works" aria-label="Примеры работ"><a class="hotspot sketches-link" href="#sketches" aria-label="Перейти к эскизам"></a></section>
+  <section class="page-section sketches" id="sketches" aria-label="Эскизы"><a class="hotspot contacts-link" href="#contacts" aria-label="Перейти к контактам"></a></section>
+  <footer class="page-section contacts" id="contacts" aria-label="Контакты">
+    <a class="contact-phone" href="tel:+79284854020" aria-label="Позвонить"></a>
+    <a class="contact-mail" href="mailto:qqmill@cloud.com" aria-label="Написать на почту"></a>
+  </footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
